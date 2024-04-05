@@ -20,7 +20,7 @@ public class PurchaseRepository {
         jdbcTemplate.update(sql,purchase.getProduct(),purchase.getPrice());
     }
         public List<Purchase> findAllPurchases(){
-         String sql = "SELECt * FROM purchases";
+         String sql = "SELECT * FROM purchases";
          RowMapper<Purchase> rowMapper = (r,i) -> {
              Purchase rowObject = new Purchase();
              rowObject.setId(r.getInt("id"));

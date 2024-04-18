@@ -26,7 +26,7 @@ public class PurchaseRepository {
              rowObject.setId(r.getInt("id"));
              rowObject.setProduct(r.getString("product"));
              rowObject.setPrice(r.getBigDecimal("price"));
-             return rowObject;//даннорое лямбда выражение создает для каждой строки sql ответа объекта типа purchase
+             return rowObject;//данное лямбда выражение создает для каждой строки sql ответа объекта типа purchase
          };
          return jdbcTemplate.query(sql,rowMapper);
         }
